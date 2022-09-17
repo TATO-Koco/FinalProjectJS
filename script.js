@@ -1,11 +1,11 @@
 //--------navbar--------
-const MenuBtn = document.getElementById("Menu-Btn")
-const Navbar = document.getElementById("Navbar")
+let menuBtn = document.getElementById('Menu-Btn')
+let navbar = document.getElementById('Navbar')
 
-MenuBtn.addEventListener("click", () => {
-    Navbar.classList.toggle("active")
+menuBtn.addEventListener('click', () => {
+    console.log('pop')
+    navbar.classList.toggle('active')
 })
-//ამას ბევრი ვეწვალე და არ ვიცი რა ჯანდაბა ჭირს :( და ბოლოს ამ ეტაპზე დავტოვე 
 
 // Registration form
 

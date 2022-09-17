@@ -8,63 +8,29 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <link rel="icon" type="x-icon" href="image/logo.png">
     <link rel="icon" type="x-icon" href="image/logo.png">
     <title>Anomonia</title>
 </head>
  
 <body>
     <!-- Navbar section -->
-    <navbar id="Navbar">
-        <img src="./image/logo.png" alt="" id="logo">
-        <ul>
-            <li><a href="#">Home</a> </li>
-            <li><a href="#">About</a> </li>
- 
-            <div id="categories">
-                <li><a href="#">Categories <i class="fas fa-caret-down"></i></a></li>
-                <div id="drop-down-box">
-                    <a href="#">Shonen</a>
-                    <a href="#">Shojo</a>
-                    <a href="#">Seinen</a>
-                    <a href="#">Josei</a>
-                    <a href="#">Kodomomuke</a>
-                </div>
-            </div>
-            <li><a href="#">Contact</a></li>
+
+    <nav>
+        <input id="nav-toggle" type="checkbox">
+        <div class="logo">Ano<strong>Monia</strong></div>
+        <ul class="links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="registration.html">Sign Up</a></li>
         </ul>
-        <div id="other-opt">
-            <div class="search">
-                <input type="search" name="search" id="search" placeholder="Search...">
-                <i class="fas fa-search"></i>
-            </div>
-            <button id="signIn"><a href="registration.html">Sign Up</a></button>
-        </div>
-        <img src="./image/menu.png" alt="Menu Png" id="Menu-Btn">
-    </navbar>
- 
-    <nav id="Other-Navbar">
-        <ul>
-            <li><a href="#">Home</a> </li>
-            <li><a href="#">About</a> </li>
- 
-            <div id="categories">
-                <li><a href="#">Categories <i class="fas fa-caret-down"></i></a></li>
-                <div id="drop-down-box">
-                    <a href="#">Shonen</a>
-                    <a href="#">Shojo</a>
-                    <a href="#">Seinen</a>
-                    <a href="#">Josei</a>
-                    <a href="#">Kodomomuke</a>
-                </div>
-            </div>
-            <li><a href="#">Contact</a></li>
-        </ul>
-        <div class="Othersearch" style="margin: auto;">
-            <input type="search" name="search" id="Othersearch" placeholder="Search...">
-            <i class="fas fa-search"></i>
-        </div>
+        <label for="nav-toggle" class="icon-burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </label>
     </nav>
+ 
  <!-- Navbar section -->
  
  
@@ -446,5 +412,6 @@
     </div>
  
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

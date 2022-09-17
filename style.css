@@ -29,190 +29,128 @@ body{
 }
 
 /*Navbar section */
-#Navbar{
-    display: flex;
-    justify-content: center;
-    background-color: rgb(20, 24, 26);
-    color: white;
-    align-items: center;
-    font-family: 'Ubuntu', sans-serif;
+.container {
+	position: relative;
+	margin-top: 100px;
 }
-#Other-Navbar{
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 50px;
-    left: 10%;
-    background: white;
-    justify-content: center;
-    width: 80vw;
-    height: 200px;
-    transition: all .5s linear;
-    margin-left: auto;
-    margin-right: auto;
+.container img {
+	display: block;
+	width: 100%;
 }
-#Other-Navbar ul{
-    margin: 12px;
+nav {
+	position: fixed;
+	z-index: 10;
+	left: 0;
+	right: 0;
+	top: 0;
+	font-family: 'Montserrat', sans-serif;
+	padding: 0 5%;
+	height: 50px;
+	background-color: black;
 }
-#Other-Navbar ul li{
-    list-style: none;
-    margin: 7px;
+nav .logo {
+	float: left;
+	width: 40%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	font-size: 24px;
+	color: #fff;
 }
-#Other-Navbar ul li a{
-    text-decoration: none;
-    color: black;
-
+nav .links {
+	float: right;
+	padding: 0;
+	margin: 0;
+	width: 60%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 }
-.show{
-    display: flex !important;
+nav .links li {
+	list-style: none;
 }
-
-#logo{
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    left: 0;
-    top: 5px;
+nav .links a {
+	display: block;
+	padding: 1em;
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+	text-decoration: none;
 }
-#Navbar ul{
-    display: flex;
-    margin: 12px;
+.signUp {
+    font-size: 50px;
 }
-#Navbar ul li{
-    list-style: none;
-    margin: 0 12px;
+#nav-toggle {
+	position: absolute;
+	top: -100px;
 }
-#Navbar ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.1em;
+nav .icon-burger {
+	display: none;
+	position: absolute;
+	right: 5%;
+	top: 50%;
+	transform: translateY(-50%);
 }
-
-#categories{
-    height: 26px;
+nav .icon-burger .line {
+	width: 30px;
+	height: 5px;
+	background-color: #fff;
+	margin: 5px;
+	border-radius: 3px;
+	transition: all .3s ease-in-out;
 }
-#drop-down-box{
-    display: none;
-    position: absolute;
-    min-width: 160px;
-    border-radius: 3px;
-    z-index: 1;
-    background-color: #f1f1f1;
-    top: 5.5%;
-    left: 46.5%;
-    box-shadow: 0 0 16px 0px rgba(0, 0, 0, 0.2);
-
-}
-#drop-down-box a {
-    display: block;
-    text-decoration: none;
-    color: black;
-    padding: 12px 16px;
-}
-#drop-down-box a:hover{
-    background: #ddd;
-    border-radius: 3px;
-}
-
-#categories:hover #drop-down-box{
-    display: block;
-}
-
-#other-opt{
-    position: absolute;
-    right: 0;
-    margin: 0 12px;
-    display: flex;
-    align-items: center;
-}
-
-
-.Othersearch{
-    background: white;
-    border-radius: 20px;
-    height: 20px;
-    color: black;
-    padding: 5px 8px;
-    position: relative;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    margin-left: 15px !important;
-}
-.Othersearch button{
-    padding: 7px ;
-    border-radius: 2px;
-    border: 1px solid rgb(255, 255, 255);
-    outline: none;
-    cursor: pointer;
-    margin: 10px;
-    background: rgb(68, 68, 68);
-    color: white;
+@media screen and (max-width: 900px) {
+	nav .logo {
+		float: none;
+		width: auto;
+		justify-content: center;
+	}
+	nav .links {
+		float: none;
+		position: fixed;
+		z-index: 9;
+		left: 0;
+		right: 0;
+		top: 100px;
+		bottom: 100%;
+		width: auto;
+		height: auto;
+		flex-direction: column;
+		justify-content: space-evenly;
+		background-color: rgba(0,0,0,.8);
+		overflow: hidden;
+		box-sizing: border-box;
+		transition: all .5s ease-in-out;
+	}
+	nav .links a {
+		font-size: 20px;
+	}
+	nav :checked ~ .links {
+		bottom: 0;
+	}
+	nav .icon-burger {
+		display: block;
+	}
+	nav :checked ~ .icon-burger .line:nth-child(1) {
+		transform: translateY(10px) rotate(225deg);
+	}
+	nav :checked ~ .icon-burger .line:nth-child(3) {
+		transform: translateY(-10px) rotate(-225deg);
+	}
+	nav :checked ~ .icon-burger .line:nth-child(2) {
+		opacity: 0;
+	}
+	
 }
 
-.search{
-    background: white;
-    border-radius: 20px;
-    height: 20px;
-    color: black;
-    padding: 5px 8px;
-    position: relative;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
-#other-opt button{
-    padding: 7px ;
-    border-radius: 2px;
-    border: 1px solid rgb(255, 255, 255);
-    outline: none;
-    cursor: pointer;
-    margin: 10px;
-    background: rgb(68, 68, 68);
-    color: white;
-}
-#other-opt i{
-    cursor: pointer;
-    background: #0b0c2a;
-    border-radius: 50%;
-    color: white;
-    position: absolute;
-    padding: 5px;
-    top: 2px;
-    right: 2px;
-}
-.Othersearch input{
-    outline: none;
-    border: 1px solid white;
-    border-radius: 30px;
-    border: none;
-}
-.Othersearch input::-webkit-search-cancel-button{
-    -webkit-appearance: none;
-    background: url("./image/times-circle-solid.svg");
-    width: 1em;
-    height: 1em;
-    opacity: .2;
-    cursor: pointer;
-}
-#other-opt input{
-    outline: none;
-    border: 1px solid white;
-    border-radius: 30px;
-    border: none;
-}
-#other-opt input::-webkit-search-cancel-button{
-    -webkit-appearance: none;
-    background: url("./image/times-circle-solid.svg");
-    width: 1em;
-    height: 1em;
-    opacity: .2;
-    cursor: pointer;
-}
-#Menu-Btn{
-    position: absolute;
-    right: 0;
-    top: 15px;
-    width: 25px;
-    margin-right: 30px;
-    filter: invert(100);
-    display: none;
+.youtube-link {
+	position: fixed;
+	left: 20px;
+	bottom: 20px;
+	color: #000;
+	text-decoration: none;
+	font-size: 12px;
 }
 /* Navbar section */
 
@@ -576,13 +514,6 @@ body{
     }
 }
 @media only screen and  (max-width:900px){
-    #Menu-Btn{
-        display: block;
-    }
-    #other-opt button{
-        margin-right: 70px;
-        
-    }
     #Navbar ul li{
         display: none;
         position: fixed;
